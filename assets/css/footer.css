@@ -1,0 +1,25 @@
+.footer{
+
+    background-color: #758EB7;
+    height: 60px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+}
+
+.footer h3{
+
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: bold;
+    padding-top: 20px;
+
+}
+
+.fa-heart{
+
+    color: red;
+
+}

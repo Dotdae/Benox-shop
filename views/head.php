@@ -1,6 +1,7 @@
 <!-- MAIN CSS-->
 <link rel="stylesheet" href="./assets/css/styles.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="./assets/css/nav.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="./assets/css/footer.css?v=<?php echo time(); ?>">
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

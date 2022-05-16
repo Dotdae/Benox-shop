@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="product-container">
-            <?php for($i = 0; $i <= 7; $i++) {?>
+            <?php for($i = 0; $i <= 9; $i++) {?>
             <div class="product-box">
                     <div class="product-img">
                         <a class="add-cart">
@@ -53,6 +53,7 @@
             <?php } ?>
         </div>
     </div>
+    <?php require 'views/footer.php' ?>
     <script src="./assets/js/slider.js"></script>
 </body>
 </html>
