@@ -71,7 +71,7 @@
             <input type="reset" value="Reiniciar formulario">
             <div class="sign-up">
                 ¿Aún no tienes una cuenta?
-                <a href="signun.php">Registrarse</a>
+                <a href="signin.php">Registrarse</a>
             </div>
         </form>
     </div>
