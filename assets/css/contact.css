@@ -1,0 +1,183 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); 
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+
+}
+
+h1{
+
+    margin-bottom: 10px;
+
+}
+
+.container{
+
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8.5%;
+    padding: 1.5em;
+
+}
+
+.container p{
+
+    margin-bottom: 40px;
+
+}
+
+.contact-box{
+
+    display: flex;
+
+}
+
+.contact-left h3{
+
+    margin-bottom: 30px;
+    font-weight: 600;
+
+}
+
+.contact-left{
+
+    flex-basis: 60%;
+    padding: 40px 60px;
+    background: #FFFFFF;
+
+}
+
+.input-row{
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+.input-group{
+
+    flex-basis: 45%;
+
+}
+
+
+
+.input-group input{
+
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    outline: none;
+    padding-bottom: 5px;
+    margin-left: 5px;
+
+}
+
+.message-group textarea{
+
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.message-group label{
+
+    margin-bottom: 6px;
+    display: block;
+
+}
+
+.button-group{
+
+    text-align: center;
+
+}
+
+.button-group button{
+
+    width: 50%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    background: #2691D9;
+    color: #E9F4FB;
+    margin: 10px;
+
+}
+
+.button-group button:hover{
+
+    border-color: #2691D9;
+    transition: .5s;
+
+}
+
+.contact-right{
+
+    flex-basis: 40%;
+    padding: 40px;
+    background: #a8c0ff;
+    color: #FFFFFF;
+
+}
+
+.contact-right h3{
+
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+
+.contact-info ul,
+.contact-info p{
+
+
+    padding: 0.3em;
+    text-align: left;
+    margin: 0 0 1rem;
+
+}
+
+.contact-info ul{
+
+    list-style: none;
+    padding: 0;
+
+}
+
+.contact-info ul li{
+
+    padding: .5em;
+
+}
+
+#x{
+
+    text-align: center;
+    padding-top: 50px;
+    transition: 0.5s ease;
+
+}
+
+#x:hover{
+
+    color: red;
+
+}

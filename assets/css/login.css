@@ -1,0 +1,164 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+
+    font-family: 'Poppin', sans-serif;
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); 
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.container{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.container h1{
+
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    margin-top: 15px;
+    text-transform: uppercase;
+
+}
+
+.container form{
+
+    padding: 0 40px;
+    box-sizing: border-box;
+
+}
+
+.text_field{
+
+    position: relative;
+    border-bottom: 2px solid #ADADAD;
+    margin: 30px 0;
+
+}
+
+.text_field input{
+
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+
+}
+
+.text_field label{
+
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #ADADAD;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+.text_field span::before{
+
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2691D9;
+    transition: 0.5s;
+
+}
+
+.text_field input:focus ~ label,
+.text_field input:valid ~ label{
+
+
+    top: -5px;
+    color: #2691D9;
+
+}
+
+.text_field input:focus ~ span::before,
+.text_field input:focus ~ span::before{
+
+    width: 100%;
+
+}
+
+input[type="submit"],
+input[type="reset"]{
+
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    background: #2691D9;
+    color: #E9F4FB;
+    margin: 5px;
+
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+
+    border-color: #2691D9;
+    transition: 0.5s;
+
+}
+
+.sign-up{
+
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+
+}
+
+.sign-up a{
+
+    color: #2691D9;
+    text-decoration: none;
+
+}
+
+
+.sign-up a:hover{
+
+    text-decoration: underline;
+
+}
+
+.register-message{
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+
+}

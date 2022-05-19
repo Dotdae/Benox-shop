@@ -1,5 +1,16 @@
 
 let slideIndex = 1;
+
+
+window.onload =  function(){
+
+    let f = document.getElementById('footer');
+
+    f.style.setProperty('position', 'relative');
+
+}
+
+
 showSlides(slideIndex);
 
 function plusSlides(n){

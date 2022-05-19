@@ -1,3 +1,28 @@
+<?php 
+
+    session_start();
+
+    require 'db.php';
+
+    if(isset($_SESSION['user_id'])){
+
+        $records = $conn->prepare("SELECT id, username, password FROM usuarios WHERE id = :id");
+        $records->bindParam(':id', $_SESSION['user_id']);
+        $records->execute();
+
+        $results = $records->fetch(PDO::FETCH_ASSOC);
+
+        $user = null;
+
+        if(count($results) > 0){
+
+            $user = $results;
+
+        }
+
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +30,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <?php require 'views/head.php' ?>
+    <link rel="stylesheet" href="./assets/css/styles.css?v=<?php echo time(); ?>">
+    <?php require 'partials/head.php' ?>
 </head>
 <body>
-    <?php require 'views/nav.php' ?>
+    <?php require 'partials/nav.php' ?>
     <div class="container">
         <div class="slider-container">
             <div class="slideshow-container">
@@ -34,7 +60,7 @@
             </div>
         </div>
         <div class="product-container">
-            <?php for($i = 0; $i <= 9; $i++) {?>
+            <?php for($i = 0; $i <= 7; $i++) {?>
             <div class="product-box">
                     <div class="product-img">
                         <a class="add-cart">
@@ -53,7 +79,7 @@
             <?php } ?>
         </div>
     </div>
-    <?php require 'views/footer.php' ?>
+    <?php require 'partials/footer.php' ?>
     <script src="./assets/js/slider.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     width: 100%;
     left: 0;
     bottom: 0;
+    position: fixed;
 
 }
 
@@ -15,6 +16,7 @@
     font-size: 16px;
     font-style: bold;
     padding-top: 20px;
+
 
 }
 
