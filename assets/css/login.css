@@ -160,5 +160,7 @@ input[type="reset"]:hover{
     text-align: center;
     font-size: 18px;
     font-weight: 600;
+    margin-top: 20px;
+    color: red;
 
 }
