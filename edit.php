@@ -1,8 +1,11 @@
 <?php
 
-    session_start();
+    require './include/db.php';
+    require './include/session_control.php';
 
-    require 'db.php';
+    checkAdmSession();
+
+    // Check user data.
 
     if(isset($_SESSION['user_id'])){
 
@@ -21,6 +24,8 @@
         }
 
     }
+
+    // Get from DB data.
 
     if(isset($_GET['id'])){
 
@@ -45,6 +50,8 @@
 
     }
 
+    // Update DB data.
+
     if(isset($_POST['actualizarInformacion'])){
 
         $id = $_GET['id'];
@@ -66,8 +73,6 @@
 
 
     }
-
-
 
 ?>
 

@@ -1,10 +1,14 @@
 <?php
 
-    session_start();
+    require './include/db.php';
 
-    require 'db.php';
+    require './include/session_control.php';
 
-    if (isset($_SESSION['user_id'])) {
+    checkAdmSession();
+
+    // Check user data.
+
+    if(isset($_SESSION['user_id'])){
 
         $records = $conn->prepare("SELECT id, username, password FROM usuarios WHERE id = :id");
         $records->bindParam(':id', $_SESSION['user_id']);
@@ -14,22 +18,13 @@
 
         $user = null;
 
-        if (count($results) > 0) {
+        if(count($results) > 0){
 
             $user = $results;
-            if ($results['id'] != 1) {
 
-                header('Location: index.php');
-            }
         }
 
-    } 
-    
-    else {
-
-        header('Location: login.php');
     }
-
     
 
 

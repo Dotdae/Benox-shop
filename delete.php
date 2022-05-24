@@ -1,8 +1,11 @@
 <?php 
 
-    session_start();
+    require './include/db.php';
 
-    require 'db.php';
+    require './include/session_control.php';
+
+    checkAdmSession();
+
 
     if(isset($_GET['id'])){
 

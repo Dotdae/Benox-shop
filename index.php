@@ -1,18 +1,10 @@
 <?php 
 
-    session_start();
+    require './include/db.php';
+    require './include/session_control.php';
 
-    /*
+    checkSession();
 
-    if(!(isset($_SESSION['user_id']))){
-
-        header('Location: login.php');
-
-    }
-
-    */
-
-    require 'db.php';
 
     if(isset($_SESSION['user_id'])){
 

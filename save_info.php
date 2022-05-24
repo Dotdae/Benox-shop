@@ -1,9 +1,9 @@
 <?php 
 
-    session_start();
+    require './include/db.php';
+    require './include/session_control.php';
 
-    require 'db.php';
-
+    checkAdmSession();
 
     if(isset($_POST['guardarInformacion'])){
 
