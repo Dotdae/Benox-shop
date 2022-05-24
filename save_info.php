@@ -12,6 +12,20 @@
         $precio = $_POST['precio'];
         $status = $_POST['status'];
 
+        // IMG Upload.
+
+        $img = $_FILES['file'];
+        $imgName = $img['name'];
+        $imgType = $img['type'];
+
+        $imgTypes = array("image/jpg", "image/jpeg", "image/png");
+
+        if(in_array($imgType, $imgTypes)){
+
+            move_uploaded_file($img['tmp_name'], "assets/img/".$imgName);
+            
+        }
+
         $sql = "INSERT INTO articulos(titulo, descripcion, precio, status) VALUES ('$titulo', '$desc', '$precio', '$status')";
 
         $stmt = $conn -> prepare($sql);

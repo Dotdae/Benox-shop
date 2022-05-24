@@ -62,23 +62,34 @@
             </div>
         </div>
         <div class="product-container">
-            <?php for($i = 0; $i <= 7; $i++) {?>
-            <div class="product-box">
-                    <div class="product-img">
-                        <a class="add-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <img src="https://i.pinimg.com/originals/a9/c5/3f/a9c53fa1ae331e1ae97c87cfc1e33c93.jpg" >
-                    </div>
-                    <div class="product-details">
-                    <a class="p-name"> Arqueóloga</a>
-                    <div class="bills-details">
-                        <img src="./assets/img/doge.png">
-                        <span class="p-price">$2000</span>
-                    </div>
-                </div>
-            </div>
-            <?php } ?>
+            <?php 
+                $stmt = $conn -> prepare("SELECT * FROM articulos");
+                $stmt -> execute();
+
+                $results = $stmt -> fetchAll();
+
+                foreach($results as $row){ 
+                    
+                    if($row['status'] == 'activo'){?>
+
+                        <div class="product-box">
+                            <div class="product-img">
+                                <a class="add-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                                    <img src="https://i.pinimg.com/originals/a9/c5/3f/a9c53fa1ae331e1ae97c87cfc1e33c93.jpg" >
+                            </div>
+                            <div class="product-details">
+                                <a class="p-name"> <?php echo $row['titulo']; ?></a>
+                                <div class="bills-details">
+                                    <img src="./assets/img/doge.png">
+                                    <span class="p-price">$<?php echo $row['precio'] ?></span>
+                                </div>
+                            </div>
+                        </div>
+                <?php 
+                    } // End IF.
+                } //End foreach.?>
         </div>
     </div>
     <?php require 'partials/footer.php' ?>

@@ -47,10 +47,10 @@
             <?php if(isset($_SESSION['mensaje'])){?>
                 <h2 class="message-<?= $_SESSION['type'] ?>"> <?= $_SESSION['mensaje'] ?></h2>
             <?php unset($_SESSION['mensaje']); } ?>
-            <form action="save_info.php" method="POST">
+            <form action="save_info.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <h4>Imagen del producto</h4>
-                    <input type="file" name="img" class="form-control" autofocus>
+                    <input type="file" name="file" class="form-control" id="img">
                 </div>
                 <div class="form-group">
                     <h4>Titulo</h4>
