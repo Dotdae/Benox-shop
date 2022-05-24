@@ -45,7 +45,8 @@ body{
     margin-bottom: 15px;    
 }
 
-.form-group input{
+.form-group input,
+.form-group select{
 
     width: 100%;
     height: 35px;
@@ -67,9 +68,115 @@ body{
 
     width: 90%;
     margin-left: 5%;
-    margin-top: 40px;
+    margin-top: 20px;
     height: 50px;
     border-radius: 15px;
     cursor: pointer;
+
+}
+
+.message-alert {
+
+    text-align: center;
+    font-size: 18px;
+    background-color: #5cb85c;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+
+}
+
+.message-danger {
+
+    text-align: center;
+    font-size: 18px;
+    background-color: #d9534f;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+
+}
+
+.table-border{
+
+    width: 100%;
+
+}
+
+.table-border th{
+
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    font-size: 22px;
+
+}
+
+.table-border td{
+
+    text-align: center;
+    border: 1px solid #000000;
+    height: 80px;
+
+}
+
+#titulo{
+
+    width: 170px;
+
+}
+
+#descripcion{
+
+    width: 455px;
+
+}
+
+#precio{
+
+    width: 170px;
+
+}
+
+#status{
+
+    width: 190px;
+
+}
+
+#acciones{
+
+    width: 200px;
+
+}
+
+.edit-btn i{
+
+    color: #000000;
+    padding: 20px;
+
+}
+
+.edit-btn i:hover {
+
+    color: rgb(13, 126, 56);
+
+
+}
+
+.delete-btn i{
+
+    color: #000000;
+    padding: 20px;
+
+}
+
+.delete-btn i:hover {
+
+    color: rgb(143, 5, 5);
+
 
 }

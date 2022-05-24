@@ -1,0 +1,77 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); 
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+
+}
+
+.container{
+
+    width: 500px;
+    height: 700px;
+    background: #FFFFFF;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+.card{
+
+    background: #a8c0ff;
+    width: 100%;
+
+}
+
+.form-group{
+
+    padding: 20px;
+
+}
+
+.form-group h4{
+
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 15px;    
+}
+
+.form-group input,
+.form-group select{
+
+    width: 100%;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.form-group input[type="file"]{
+
+    text-align-last: center;
+    border: none;
+
+}
+
+.save-info{
+
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 100px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
