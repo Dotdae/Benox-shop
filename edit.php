@@ -58,6 +58,10 @@
 
         $stmt -> execute();
 
+
+        $_SESSION['mensaje'] = '¡Artículo actualizado!';
+        $_SESSION['type'] = 'alert';
+
         header('Location: admin.php');
 
 
