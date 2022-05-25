@@ -43,6 +43,7 @@
             $titulo = $results['titulo'];
             $desc = $results['descripcion'];
             $precio = $results['precio'];
+            $stock = $results['stock'];
             $status = $results['status'];
 
         }
@@ -58,10 +59,11 @@
         $titulo = $_POST['titulo'];
         $desc = $_POST['descripcion'];
         $precio = $_POST['precio'];
+        $stock = $_POST['stock'];
         $status = $_POST['status'];
 
 
-        $stmt = $conn -> prepare("UPDATE articulos SET titulo = '$titulo', descripcion = '$desc', precio = '$precio', status = '$status' WHERE id = '$id'");
+        $stmt = $conn -> prepare("UPDATE articulos SET titulo = '$titulo', descripcion = '$desc', precio = '$precio', status = '$status', stock = '$stock' WHERE id = '$id'");
 
         $stmt -> execute();
 
@@ -102,6 +104,10 @@
                     <div class="form-group">
                         <h4>Precio</h4>
                         <input type="number" name="precio" class="form-control" placeholder="Precio" autofocus required value="<?php echo $precio; ?>">
+                    </div>
+                    <div class="form-group">
+                        <h4>Stock</h4>
+                        <input type="number" name="stock" class="form-control" placeholder="Precio" autofocus required value="<?php echo $stock; ?>">
                     </div>
                     <div class="form-group">
                         <h4>Status</h4>

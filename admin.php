@@ -65,6 +65,10 @@
                     <input type="number" name="precio" class="form-control" placeholder="Precio" autofocus required>
                 </div>
                 <div class="form-group">
+                    <h4>Stock</h4>
+                    <input type="number" name="stock" class="form-control" placeholder="Precio" autofocus required>
+                </div>
+                <div class="form-group">
                     <h4>Status</h4>
                     <select name="status" class="form-control">
                         <option value="activo">Activo</option>
@@ -82,6 +86,7 @@
                         <th id="descripcion">Descripcion</th>
                         <th id="precio">Precio</th>
                         <th id="status">Status</th>
+                        <th id="stock">Stock</th>
                         <th id="acciones">Acciones</th>
                     </tr>
                 </thead>
@@ -101,6 +106,7 @@
                             <td><?php echo $row['descripcion']?></td>
                             <td><?php echo "$" . $row['precio']?></td>
                             <td><?php echo $row['status']?></td>
+                            <td><?php echo $row['stock']?></td>
                             <td>
                                 <a class="edit-btn" href="edit.php?id=<?php echo $row['id']?>">
                                     <i class="fa-solid fa-pen fa-xl"></i>

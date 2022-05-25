@@ -11,6 +11,7 @@
         $desc = $_POST['descripcion'];
         $precio = $_POST['precio'];
         $status = $_POST['status'];
+        $stock = $_POST['stock'];
 
         // IMG Upload.
 
@@ -26,7 +27,7 @@
             
         }
 
-        $sql = "INSERT INTO articulos(titulo, descripcion, precio, status) VALUES ('$titulo', '$desc', '$precio', '$status')";
+        $sql = "INSERT INTO articulos(titulo, descripcion, precio, status, stock, img) VALUES ('$titulo', '$desc', '$precio', '$status', '$stock', '$imgName')";
 
         $stmt = $conn -> prepare($sql);
 

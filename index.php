@@ -70,17 +70,18 @@
 
                 foreach($results as $row){ 
                     
-                    if($row['status'] == 'activo'){?>
+                    if($row['status'] == 'activo' && $row['stock'] != '0'){?>
 
                         <div class="product-box">
                             <div class="product-img">
                                 <a class="add-cart">
                                     <i class="fas fa-shopping-cart"></i>
                                 </a>
-                                    <img src="https://i.pinimg.com/originals/a9/c5/3f/a9c53fa1ae331e1ae97c87cfc1e33c93.jpg" >
+                                    <img src="./assets/img/<?php echo $row['img'] ?>" >
                             </div>
                             <div class="product-details">
                                 <a class="p-name"> <?php echo $row['titulo']; ?></a>
+                                <p class="p-desc"><?php echo $row['descripcion'] ?></p>
                                 <div class="bills-details">
                                     <img src="./assets/img/doge.png">
                                     <span class="p-price">$<?php echo $row['precio'] ?></span>

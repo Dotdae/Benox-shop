@@ -34,7 +34,7 @@ body{
 
 .form-group{
 
-    padding: 20px;
+    padding: 15px;
 
 }
 
@@ -49,7 +49,7 @@ body{
 .form-group select{
 
     width: 100%;
-    height: 35px;
+    height: 30px;
     border: 1px solid;
     border-radius: 10px;
     text-align: center;
@@ -68,7 +68,7 @@ body{
 
     width: 90%;
     margin-left: 5%;
-    margin-top: 20px;
+    margin-top: 12px;
     height: 50px;
     border-radius: 15px;
     cursor: pointer;
@@ -78,11 +78,11 @@ body{
 .message-alert {
 
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #5cb85c;
     width: 90%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 10px;
     font-weight: 500;
 
@@ -91,11 +91,11 @@ body{
 .message-danger {
 
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #d9534f;
     width: 90%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 10px;
     font-weight: 500;
 
@@ -143,7 +143,13 @@ body{
 
 #status{
 
-    width: 190px;
+    width: 100px;
+
+}
+
+#stock{
+
+    width: 89px;
 
 }
 
