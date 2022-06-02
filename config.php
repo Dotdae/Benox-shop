@@ -37,7 +37,7 @@
 <body>
     <?php require 'partials/nav.php' ?>
         <div class="container">
-            <form action="#">
+            <form action="config.php" method="POST">
                 <div class="config">
                     <div class="fuente">
                         <h1>Tamaño de la fuente</h1>
@@ -62,11 +62,12 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button type="submit">Guardar configuración</button>
-                    <button type="submit">Eliminar configuración</button>
+                    <button type="submit" onclick="setConfig();">Guardar configuración</button>
+                    <button type="submit" onclick="cleanCookies();">Eliminar configuración</button>
                 </div>
             </form>
         </div>
     <?php require 'partials/footer.php' ?>
+    <script src="./assets/js/config.js"></script>
 </body>
 </html>

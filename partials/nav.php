@@ -23,9 +23,8 @@
                     <li class="nav-item"><a href="config.php" class="nav-item-link">Configuración</a></li>
                 <?php endif;?>
                 <li class="nav-item">
-                    <a href="#" class="nav-item-link">
+                    <a href="cart.php" class="nav-item-link">
                         <i class="fas fa-shopping-cart">
-                            <span class="productos">0</span>
                         </i>
                     </a>
                 </li>

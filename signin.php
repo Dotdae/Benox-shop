@@ -99,5 +99,6 @@
     </div>
     <?php require 'partials/footer.php' ?>
     <script src="./assets/js/app.js"></script>
+    <script type="text/javascript" src="./assets/js/config.js"></script>
 </body>
 </html>

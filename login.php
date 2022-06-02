@@ -24,6 +24,7 @@
         if(count($results) > 0 && password_verify($_POST['password'], $results['password'])){
 
             $_SESSION['user_id'] = $results['id'];
+            //setcookie("user_id", $results['id'], time() + (86400 * 30), "/");
 
             header('Location: index.php');
 
@@ -75,5 +76,6 @@
         </form>
     </div>
     <?php require 'partials/footer.php' ?>
+    <script type="text/javascript" src="./assets/js/config.js"></script>
 </body>
 </html>

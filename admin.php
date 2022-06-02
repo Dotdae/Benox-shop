@@ -123,5 +123,6 @@
         </div>
     </div>
     <?php require 'partials/footer.php' ?>
+    <script type="text/javascript" src="./assets/js/config.js"></script>
 </body>
 </html>

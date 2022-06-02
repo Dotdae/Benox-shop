@@ -24,6 +24,7 @@
 
     }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,23 +72,32 @@
                 foreach($results as $row){ 
                     
                     if($row['status'] == 'activo' && $row['stock'] != '0'){?>
-
+                    <form action="cart.php?action=add&id=<?php echo $row['id']?>" method="post">
                         <div class="product-box">
                             <div class="product-img">
-                                <a class="add-cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </a>
-                                    <img src="./assets/img/<?php echo $row['img'] ?>" >
+                                <img src="./assets/img/<?php echo $row['img'] ?>" >
                             </div>
                             <div class="product-details">
-                                <a class="p-name"> <?php echo $row['titulo']; ?></a>
+                                <a class="p-name" name='name'> <?php echo $row['titulo']; ?></a>
                                 <p class="p-desc"><?php echo $row['descripcion'] ?></p>
+                                <p class="p-disp" name='quantity'>Disponibles: <?php echo $row['stock'];?></p>
+                                <input type="hidden" id="cant" value="<?php echo $row['stock'];?>">
+                                <div class="counter">
+                                    <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                    <input type="text" value="1" name="quantity"  min="1">
+                                    <span class="up" onClick='increaseCount(event, this, <?php echo $row['stock'];?>)'>+</span>
+                                </div>
+                                <input type="hidden" name="name" value="<?= $row['titulo']?>">
+                                <input type="hidden" name="price" value="<?= $row['precio']?>">
+                                <input type="submit" name="add_cart" class="btn-submit" value="Agregar al carrito">
                                 <div class="bills-details">
                                     <img src="./assets/img/doge.png">
-                                    <span class="p-price">$<?php echo $row['precio'] ?></span>
+                                    <span class="p-price" name='price'>$ <?php echo $row['precio'] ?></span>
                                 </div>
                             </div>
                         </div>
+                    </form>
+                        
                 <?php 
                     } // End IF.
                 } //End foreach.?>
@@ -95,5 +105,7 @@
     </div>
     <?php require 'partials/footer.php' ?>
     <script src="./assets/js/slider.js"></script>
+    <script type="text/javascript" src="./assets/js/config.js"></script>
+    <script src="./assets/js/cart.js"></script>
 </body>
 </html>
